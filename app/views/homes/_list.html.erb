@@ -1,0 +1,17 @@
+<% @homes.each do |home| %>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="well well-lg">
+        
+        <div class="article-body">
+          <%= home.name %>
+          <div class="article-meta-details">
+            <small>
+              Dirección: <%= home.address %> 
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -16,7 +16,7 @@ class HomesController < ApplicationController
   end
 
   def index
-
+    @homes = current_user.homes
   end
 
   def show
