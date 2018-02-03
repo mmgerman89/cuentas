@@ -2,15 +2,15 @@
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
       <div class="well well-lg">
-        
-        <div class="article-body">
-          <%= home.name %>
-          <div class="article-meta-details">
-            <small>
-              Dirección: <%= home.address %> 
-            </small>
+        <%= home.name %>
+        <small>
+          Dirección: <%= home.address %> 
+        </small>
+        <% if home.user == current_user %>
+          <div class="home-actions">
+            <%= link_to "Editar", edit_home_path(home), class: "btn btn-xs btn-success" %>
           </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
