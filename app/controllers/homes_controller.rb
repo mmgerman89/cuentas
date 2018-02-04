@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-  before_action :set_home, only: [:edit, :show, :update]
+  before_action :set_home, only: [:edit, :show, :update, :destroy]
 
   def new
     @home = Home.new()
@@ -35,7 +35,16 @@ class HomesController < ApplicationController
   end
 
   def show
-    
+  end
+
+  def destroy
+    if @home.destroy
+      flash[:success] = "La casa se eliminó correctamente"
+      redirect_to homes_path
+    else
+      flash[:danger] = "No se pudo eliminar la casa"
+      render 'new'
+    end
   end
 
   private
