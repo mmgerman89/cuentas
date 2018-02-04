@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home: one
+  alias: MyString
+  periodicity: 1
+  since: 2018-02-04
+  until: 2018-02-04
+  status: 1
+
+two:
+  home: two
+  alias: MyString
+  periodicity: 1
+  since: 2018-02-04
+  until: 2018-02-04
+  status: 1

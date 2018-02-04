@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180203012142) do
+ActiveRecord::Schema.define(version: 20180204225936) do
+
+  create_table "companies", force: :cascade do |t|
+    t.integer "home_id"
+    t.string "alias"
+    t.integer "periodicity"
+    t.date "since"
+    t.date "until"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["home_id"], name: "index_companies_on_home_id"
+  end
 
   create_table "homes", force: :cascade do |t|
     t.string "name"
