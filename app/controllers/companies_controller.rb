@@ -2,7 +2,8 @@ class CompaniesController < ApplicationController
   before_action :set_company, only: [:edit, :show, :update, :destroy]
 
   def index
-    @companies = Company.all
+    @home = Home.find(params[:home])
+    @companies = @home.companies
   end
 
   def show

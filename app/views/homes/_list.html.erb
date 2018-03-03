@@ -13,7 +13,7 @@
         <td><%= home.address %></td>
         <% if home.user == current_user %>
           <td>
-            <%= link_to "Compañías", companies_path(home), class: "badge badge-pill badge-primary" %>
+            <%= link_to "Compañías", companies_path(home: home), class: "badge badge-pill badge-primary" %>
             <%= link_to "Editar", edit_home_path(home), class: "badge badge-pill badge-primary" %>
             <%= link_to "Eliminar", home_path(home), class: "badge badge-pill badge-danger", method: :delete, data: { confirm: "Está seguro?"} %>
           </td>

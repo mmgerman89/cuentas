@@ -1,0 +1,16 @@
+<h1>Compañías de <%= @home.name %></h1>
+
+<table class="table table-hover table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>Compañía</th>
+      <th>Alias</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @companies.each do |company| %>
+      <%= company.alias %>
+    <% end %>
+  </tbody>
+</table>
